@@ -1,0 +1,71 @@
+.o-listing-hero {
+  margin-top: 67px;
+  position: relative;
+  width: 100%;
+  height: 823px;
+
+  &__navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 4;
+  }
+
+  &__bg {
+     position: absolute;
+     top: 0;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     z-index: 1;
+  }
+
+
+  &__bg-image {
+    width: 100%;
+    height: 100%;
+    #object-fit(cover);
+  }
+
+  &__bg-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    background: transparent linear-gradient(180deg, #00000000 0%, #151515 100%) 0% 0% no-repeat padding-box;
+  }
+
+  &__container {
+    #make-container();
+    max-width: 886px;
+    position: relative;
+    z-index: 3;
+    padding-top: 209px;
+  }
+
+  &__sub-title {
+    color: @white;
+    font-size: 16px;
+    letter-spacing: 2.4px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  &__title {
+    color: @white;
+    font-size: 56px;
+    line-height: 67px;
+    font-weight: @font-weight-bolder;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  &__sub {
+    font-size: 18px;
+    color: @white;
+    text-align: center;
+  }
+}

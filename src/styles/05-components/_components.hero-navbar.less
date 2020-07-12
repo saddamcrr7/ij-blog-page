@@ -1,0 +1,31 @@
+.c-hero-navbar {
+  background: rgba(@black, 0.43);
+  box-shadow: 0px 1px 2px #0000001A;
+  width: 100%;
+
+  &__items {
+    #make-container();
+    #make-container-max-widths();
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0;
+  }
+
+  &__item {
+    margin: 0 10px;
+  }
+
+  &__item-link{
+    padding: 20px 25px;
+    display: block;
+    color: @white;
+    font-size: 15px;
+    font-weight: @font-weight-semibold;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
