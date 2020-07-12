@@ -1,0 +1,64 @@
+.c-categorie-card {
+  width: 274px;
+  height: 216px;
+  overflow: hidden;
+  border-radius: 5px;
+  position: relative;
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+  }
+
+  &__bg-image {
+    width: 100%;
+    height: 100%;
+    #object-fit(cover);
+  }
+
+  &__bg-overlay {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: transparent linear-gradient(0deg, #000000D4 0%, #545454 100%) 0% 0% no-repeat padding-box;
+    opacity: 0.88;
+  }
+
+  &__content {
+    position: relative;
+    z-index: 2;
+    padding: 23px 20px;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+  }
+
+  &__hasPost {
+    color: @primary;
+    font-size: 16px;
+    font-weight: @font-weight-bold;
+    text-transform: capitalize;
+  }
+
+  &__title {
+    color: @white;
+    font-size: 26px;
+    font-weight: @font-weight-bold;
+    text-transform: capitalize;
+  }
+
+  &__title-sm {
+    font-size: 18px;
+    font-weight: @font-weight-normal;
+  }
+}

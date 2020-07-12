@@ -1,0 +1,52 @@
+.c-post-categorie-tag {
+  padding: 8px 13px 8px 31px;
+  color: #565656;
+  background: @white;
+  font-size: 11px;
+  line-height: 11px;
+  border-radius: 14px;
+  position: relative;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 13px;
+    width: 12px;
+    height: 12px;
+    border-radius: 12px;
+    transform: translateY(-50%);
+  }
+
+  &--blue {
+    &::before {
+      background: @primary;
+    }
+  }
+
+  &--red {
+    &::before {
+      background: #F74658;
+    }
+  }
+
+  &--orange {
+    &::before {
+      background: #ED7E4F;
+    }
+  }
+  &--violet {
+    &::before {
+      background: #ED4FED;
+    }
+  }
+  &--green {
+    &::before {
+      background: #64D842;
+    }
+  }
+}

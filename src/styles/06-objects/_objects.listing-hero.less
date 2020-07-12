@@ -2,7 +2,7 @@
   margin-top: 67px;
   position: relative;
   width: 100%;
-  height: 823px;
+  background-color: #151515;
 
   &__navbar {
     position: absolute;
@@ -12,12 +12,13 @@
   }
 
   &__bg {
-     position: absolute;
-     top: 0;
-     left: 0;
-     right: 0;
-     bottom: 0;
-     z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    height: 823px;
   }
 
 
@@ -43,6 +44,7 @@
     position: relative;
     z-index: 3;
     padding-top: 209px;
+    padding-bottom: 267px;
   }
 
   &__sub-title {
@@ -67,5 +69,10 @@
     font-size: 18px;
     color: @white;
     text-align: center;
+  }
+
+  &__slider {
+    position: relative;
+    z-index: 5;
   }
 }
