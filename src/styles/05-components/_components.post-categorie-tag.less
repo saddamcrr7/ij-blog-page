@@ -23,9 +23,27 @@
     transform: translateY(-50%);
   }
 
+  &--bold {
+    font-weight: @font-weight-bold;
+    font-size: 14px;
+    line-height: 14px;
+    padding: 9px 33px 10px 53px;
+    border-radius: 30px;
+
+    &::before {
+      left: 33px;
+      width: 14px;
+      height: 14px;
+    }
+  }
+
   &--blue {
     &::before {
       background: @primary;
+    }
+
+    &:hover {
+      color: @primary;
     }
   }
 
@@ -33,21 +51,39 @@
     &::before {
       background: #F74658;
     }
+
+    &:hover {
+      color: #F74658;
+    }
   }
 
   &--orange {
     &::before {
       background: #ED7E4F;
     }
+
+    &:hover {
+      color: #ED7E4F;
+    }
   }
+
   &--violet {
     &::before {
       background: #ED4FED;
     }
+
+    &:hover {
+      color: #ED4FED;
+    }
   }
+
   &--green {
     &::before {
       background: #64D842;
+    }
+
+    &:hover {
+      color: #64D842;
     }
   }
 }
