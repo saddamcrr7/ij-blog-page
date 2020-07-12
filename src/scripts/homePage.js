@@ -9,3 +9,13 @@ const listingategories = new Swiper('.o-listing-hero__slider .o-categories-slide
   slideActiveClass: 'o-categories-slider__item--active',
   loop: true
 })
+
+
+const FeaturedSlider = new Swiper('.o-featured__slider', {
+  slidesPerView: 'auto',
+  spaceBetween: 20,
+  wrapperClass: 'o-featured__slider-row',
+  slideClass: 'o-featured__slider-item',
+  slideActiveClass: 'o-featured__slider-item--active',
+  loop: true
+})
