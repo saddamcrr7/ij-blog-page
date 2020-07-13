@@ -1,0 +1,141 @@
+.c-podcast {
+  position: relative;
+  width: 100%;
+  padding-top: 22px;
+
+  &__container {
+    position: relative;
+    padding: 83px 30px 54px 30px;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+
+  &__paly-icon {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    border: 9px solid #151515;
+    border-radius: 100px;
+  }
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+  }
+
+  &__bg-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  &__content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+  }
+
+  &__titles {
+    margin-bottom: 24px;
+
+  }
+
+  &__title {
+    font-size: 29px;
+    color: @white;
+    text-transform: uppercase;
+    line-height: 40px;
+
+    &--bold {
+      font-weight: @font-weight-bolder;
+    }
+  }
+
+  &__sub {
+    font-size: 16px;
+    color: @white;
+    line-height: 24px;
+    margin-bottom: 28px;
+  }
+
+  &__host {}
+
+  &__host-title {
+    font-size: 16px;
+    color: @white;
+    margin-bottom: 16px;
+  }
+
+  &__host-parsons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+
+  &__host-parson-name {
+    position: absolute;
+    background: #151515;
+    padding: 5px 11px;
+    color: @white;
+    font-size: 14px;
+    border-radius: 3px;
+    line-height: 14px;
+    font-weight: @font-weight-semibold;
+    top: 0;
+    right: 70%;
+    width: max-content;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+  }
+
+  &__host-parson-image {
+    width: 47px;
+    height: 47px;
+    border-radius: 25px;
+    border: 2px solid #FFFFFF;
+    object-fit: cover;
+  }
+
+  &__host-parson {
+    position: relative;
+    cursor: pointer;
+
+    &:first-child {
+      margin-right: 6px;
+    }
+
+    &:hover .c-podcast__host-parson-name {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &--yellow {
+    .c-podcast__bg-overlay {
+      background: transparent linear-gradient(180deg, #DEB339CC 0%, #D9A81B 100%) 0% 0% no-repeat padding-box;
+    }
+  }
+
+  &--violet {
+    .c-podcast__bg-overlay {
+      background: transparent linear-gradient(180deg, #6E41BECC 0%, #6E41BE 100%) 0% 0% no-repeat padding-box;
+    }
+  }
+
+  &--blue {
+    .c-podcast__bg-overlay {
+      background: transparent linear-gradient(180deg, #3499CAE6 0%, #3499CA 100%) 0% 0% no-repeat padding-box;
+    }
+  }
+}
