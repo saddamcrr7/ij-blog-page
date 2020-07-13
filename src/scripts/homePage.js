@@ -19,3 +19,12 @@ const FeaturedSlider = new Swiper('.o-featured__slider', {
   slideActiveClass: 'o-featured__slider-item--active',
   loop: true
 })
+
+
+const categoriePostSlider = new Swiper('.o-categorie-post__slider', {
+  slidesPerView: 1,
+  spaceBetween: 20,
+  wrapperClass: 'o-categorie-post__slider-row',
+  slideClass: 'o-categorie-post__slider-item',
+  slideActiveClass: 'o-categorie-post__slider-item--active',
+})

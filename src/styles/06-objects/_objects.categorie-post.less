@@ -1,0 +1,31 @@
+.o-categorie-post {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background: #232323;
+
+  &__container {
+    #make-container();
+    #make-container-max-widths();
+  }
+
+  &__slider {
+    margin: 0 auto;
+    position: relative;
+    padding: 0;
+    z-index: 1;
+    overflow: hidden;
+  }
+
+  &__slider-row {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    transition-property: transform;
+  }
+
+  &__slider-item {
+    flex: 0 0 auto;
+  }
+}
