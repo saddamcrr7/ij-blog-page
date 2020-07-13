@@ -6,14 +6,16 @@
   &__container {
     #make-container();
     #make-container-max-widths();
+    position: relative;
+
   }
 
   &__slider {
     margin: 0 auto;
-    position: relative;
     padding: 0;
     z-index: 1;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
   }
 
   &__slider-row {
@@ -27,5 +29,47 @@
 
   &__slider-item {
     flex: 0 0 auto;
+  }
+
+  &__slider-arrow {
+    position: absolute;
+    top: 0;
+    cursor: pointer;
+    right: @grid-gutter-width / 2;
+    width: 36px;
+    height: 36px;
+    border: 1px solid #707070;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+    border-radius: 2px;
+    background: @white;
+    transition: background 0.3s;
+
+    svg path {
+      stroke: #686868;
+    }
+
+    &--disabled {
+      cursor: auto;
+      background: none;
+
+      svg path {
+        stroke: @white;
+      }
+    }
+
+    &--prev {
+      margin-right: 42px;
+    }
+
+    &--next {
+      svg {
+        transform: rotate(180deg);
+      }
+    }
+
+
   }
 }
