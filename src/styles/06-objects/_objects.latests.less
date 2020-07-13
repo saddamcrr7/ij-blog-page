@@ -1,0 +1,23 @@
+.o-latests {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background: #151515;
+
+  &__container {
+    #make-container();
+    #make-container-max-widths();
+  }
+
+  &__row {
+    #make-row();
+  }
+
+  &__col {
+    #make-col-ready();
+    margin-bottom: 28px;
+
+    #media-breakpoint-up(md, {
+      #make-col(4)
+    });
+  }
+}
