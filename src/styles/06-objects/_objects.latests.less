@@ -17,7 +17,40 @@
     margin-bottom: 28px;
 
     #media-breakpoint-up(md, {
-      #make-col(4)
-    });
+        #make-col(4)
+      }
+
+    );
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    background: @primary;
+    border-radius: 26px;
+    border: none;
+    margin-top: 20px;
+  }
+
+  &__btn-text {
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: @font-weight-bolder;
+    color: @white;
+    padding: 18px 26px 17px 31px;
+    text-transform: uppercase;
+  }
+
+  &__btn-icon {
+    padding: 24px 16px 21px 11px;
+    border-left: 0.5px solid rgba(#151515, 0.4);
+
+    svg {
+      display: block;
+      width: 11px;
+      height: 7px;
+    }
   }
 }
