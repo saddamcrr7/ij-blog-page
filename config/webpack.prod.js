@@ -1,7 +1,9 @@
 const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const {
+  CleanWebpackPlugin
+} = require("clean-webpack-plugin");
 const CompressionPlugin = require("compression-webpack-plugin");
 const TerserJSPlugin = require("terser-webpack-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
@@ -20,8 +22,7 @@ module.exports = {
   },
   mode: "production",
   module: {
-    rules: [
-      {
+    rules: [{
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
@@ -39,16 +40,14 @@ module.exports = {
       },
       {
         test: /\.(png|svg|jpe?g|gif)$/,
-        use: [
-          {
-            loader: "file-loader", // This will resolves import/require() on a file into a url and emits the file into the output directory.
-            options: {
-              name: "[name].[ext]",
-              outputPath: "assets/",
-              esModule: false
-            }
-          },
-        ]
+        use: [{
+          loader: "file-loader", // This will resolves import/require() on a file into a url and emits the file into the output directory.
+          options: {
+            name: "[name].[ext]",
+            outputPath: "assets/",
+            esModule: false
+          }
+        }, ]
       },
       {
         test: /\.html$/,
@@ -84,7 +83,9 @@ module.exports = {
     new CleanWebpackPlugin(),
     // PurgecssPlugin will remove unused CSS
     new PurgecssPlugin({
-      paths: glob.sync(path.resolve(__dirname, '../src/**/*'), { nodir: true })
+      paths: glob.sync(path.resolve(__dirname, '../src/**/*'), {
+        nodir: true
+      })
     }),
     // This plugin will extract all css to one file
     new MiniCssExtractPlugin({
@@ -95,6 +96,10 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "./src/index.html",
       filename: "index.html"
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/single-categorie.html",
+      filename: "singel-categorie.html"
     }),
     // ComppresionPlugin will Prepare compressed versions of assets to serve them with Content-Encoding.
     // In this case we use gzip
