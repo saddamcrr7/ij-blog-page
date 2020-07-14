@@ -37,3 +37,30 @@ const categoriePostSlider = new Swiper('.o-categorie-post__slider', {
     disabledClass: 'o-categorie-post__slider-arrow--disabled',
   },
 })
+
+
+const selectElms = document.querySelectorAll('.o-newsletter__form-select')
+
+console.log(selectElms);
+
+selectElms.forEach(selectElm => {
+    const openBtn = selectElm.querySelector('.o-newsletter__form-select-main')
+    const selectedText = selectElm.querySelector('.o-newsletter__form-select-text')
+    const options = selectElm.querySelectorAll('.o-newsletter__form-select-option')
+
+    openBtn.addEventListener('click', () => {
+        selectElm.classList.add('is-active')
+    })
+
+    options.forEach(option => {
+        option.addEventListener('click', () => {
+            selectElm.classList.remove('is-active')
+            selectedText.dataset.value = option.dataset.value
+            selectedText.innerHTML = option.innerText
+        })
+    })
+
+    selectElm.addEventListener('mouseleave', () => {
+        selectElm.classList.remove('is-active')
+    })
+})
