@@ -44,6 +44,7 @@
 
         a {
           color: #4A4A4A;
+          font-weight: @font-weight-semibold;
         }
       }
 
@@ -182,6 +183,38 @@
 
       &__sub {
         display: none;
+      }
+    }
+  }
+
+  &--music {
+    .c-post-card {
+      &__header {
+        height: 232px !important;
+      }
+
+      &__body {
+        position: relative;
+        z-index: 5;
+        margin-top: -50px;
+        padding-top: 48px !important;
+      }
+
+      &__sub {
+        margin-bottom: 60px;
+      }
+
+      &__tag {
+        position: absolute;
+        bottom: 0;
+        left: 30px;
+        margin-bottom: 36px !important;
+      }
+
+      &__play-icon{
+        position: absolute;
+        top: -22px;
+        left: 30px;
       }
     }
   }
