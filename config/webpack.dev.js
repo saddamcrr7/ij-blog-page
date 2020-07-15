@@ -74,5 +74,9 @@ module.exports = {
       template: "./src/single-categorie.html",
       filename: "single-categorie.html"
     }),
+    new HtmlWebpackPlugin({
+      template: "./src/article.html",
+      filename: "article.html"
+    }),
   ]
 };
