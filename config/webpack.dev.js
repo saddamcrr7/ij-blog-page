@@ -72,7 +72,7 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       template: "./src/single-categorie.html",
-      filename: "singel-categorie.html"
+      filename: "single-categorie.html"
     }),
   ]
 };

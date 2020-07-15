@@ -5,7 +5,7 @@ import Swiper, { Navigation, Pagination } from 'swiper';
 Swiper.use([Navigation, Pagination]);
 
 const listingategories = new Swiper(
-  '.o-listing-hero__slider .o-categories-slider__wrapper', {
+  '.o-categories-slider__wrapper', {
     slidesPerView: 'auto',
     spaceBetween: 20,
     wrapperClass: 'o-categories-slider__row',

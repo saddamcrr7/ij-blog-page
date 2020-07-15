@@ -99,7 +99,7 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       template: "./src/single-categorie.html",
-      filename: "singel-categorie.html"
+      filename: "single-categorie.html"
     }),
     // ComppresionPlugin will Prepare compressed versions of assets to serve them with Content-Encoding.
     // In this case we use gzip
