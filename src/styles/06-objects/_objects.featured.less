@@ -8,6 +8,10 @@
     width: 100%;
     max-width: 1261px + (@grid-gutter-width / 2);
     margin-left: auto;
+
+    #media-breakpoint-down(md, {
+      max-width: 748 + @grid-gutter-width / 2;
+    })
   }
 
   &__slider {

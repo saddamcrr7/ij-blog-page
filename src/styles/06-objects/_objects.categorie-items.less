@@ -15,7 +15,10 @@
     #make-col-ready();
 
     &--left {
-      #make-col(8.51);
+      #media-breakpoint-up(lg, {
+          #make-col(8.51);
+        }
+      );
 
       .c-post-card {
         margin-bottom: 20px;
@@ -31,6 +34,12 @@
       .c-post-card {
         margin-bottom: 26px;
       }
+
+      #media-breakpoint-down(md, {
+          display: none;
+        }
+
+      )
     }
   }
 
@@ -40,6 +49,10 @@
 
     .c-small-ij-banner {
       margin-bottom: 26px;
+    }
+
+    .c-post-card {
+      margin-bottom: 16px;
     }
   }
 
@@ -84,6 +97,23 @@
 
   &__btn {
     margin-top: 40px;
+  }
+
+
+  &__posts {
+    #media-breakpoint-down(md , {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      .c-post-card  {
+        max-width: 356px;
+      }
+    });
+
+    #media-breakpoint-down(sm, {
+      justify-content: center;
+    });
   }
 
 }

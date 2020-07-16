@@ -11,6 +11,10 @@
     top: 0;
     left: 0;
     z-index: 1;
+
+    #media-breakpoint-down(sm, {
+      height: 250px;
+    })
   }
 
   &__bg-image {
@@ -27,6 +31,10 @@
     left: 0;
     background: transparent linear-gradient(180deg, #15151500 0%, #151515 100%) 0% 0% no-repeat padding-box;
     z-index: 1;
+
+    #media-breakpoint-down(sm, {
+      display: none;
+    })
   }
 
   &__container {
@@ -35,6 +43,12 @@
     #make-container();
     #make-container-max-widths();
     padding-top: 200px;
+
+    #media-breakpoint-down(sm, {
+      padding-left: 0;
+      padding-right: 0;
+      max-width: 100%;
+    })
   }
 
   &__body {
@@ -44,17 +58,33 @@
     position: relative;
     padding: 63px 67px;
     display: flex;
+
+    #media-breakpoint-down(md, {
+      padding: 43px 42px;
+    });
+
+
+    #media-breakpoint-down(sm, {
+      border-radius: 0;
+      padding: 30px 20px
+    });
   }
 
   &__wrapper {
-    padding-left: 66px;
-    padding-right: 104px;
+    #media-breakpoint-up(lg, {
+      padding-left: 66px;
+      padding-right: 104px;
+    })
   }
 
   &__share {
     position: sticky;
     top: 100px;
     left: 0;
+
+    #media-breakpoint-down(md, {
+      display: none;
+    })
   }
 
   &__cat-tag {
@@ -68,6 +98,11 @@
     color: #191919;
     margin-bottom: 16px;
     line-height: 44px;
+
+    #media-breakpoint-down(sm, {
+      font-size: 20px;
+      line-height: 30px;
+    })
   }
 
   &__meta {
@@ -90,10 +125,18 @@
     font-weight: @font-weight-bold;
     color: #191919;
     margin-bottom: 26px;
+
+    #media-breakpoint-down(sm, {
+      margin-bottom: 20px;
+    })
   }
 
   h2.o-article__header-text {
     font-size: 26px;
+
+    #media-breakpoint-down(sm) {
+      font-size: 20px;
+    }
   }
 
   &__image-wrapper {

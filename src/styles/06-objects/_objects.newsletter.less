@@ -12,14 +12,54 @@
     background: @white;
     padding: 40px 67px 50px 68px;
     border-radius: 5px;
+
+    #media-breakpoint-down(sm, {
+        padding: 50px 30px;
+      }
+
+    )
   }
 
   &__title {
+    display: none;
+    font-size: 24px;
+    margin-bottom: 11px;
+    color: #0F0F0F;
+    text-align: center;
+    font-weight: @font-weight-bold;
+
+    #media-breakpoint-down(sm, {
+        display: block;
+      }
+    );
+  }
+
+  &__sub {
     font-size: 25px;
     font-weight: @font-weight-bold;
     color: #414141;
     margin-bottom: 44px;
     text-align: center;
+
+
+    #media-breakpoint-down(md, {
+        font-size: 21px;
+        margin-bottom: 50px;
+      }
+
+    );
+
+    #media-breakpoint-down(sm, {
+        font-size: 16px;
+        text-align: center;
+        color: #0F0F0F;
+        margin-bottom: 28px;
+        font-weight: @font-weight-normal;
+        height: 19px;
+        overflow: hidden;
+      }
+
+    );
   }
 
   &__form {
@@ -28,6 +68,12 @@
     justify-content: space-between;
     align-items: flex-end;
     flex-wrap: wrap;
+
+    #media-breakpoint-down(sm, {
+        justify-content: center;
+      }
+
+    )
   }
 
   &__form-label {
@@ -35,6 +81,12 @@
     color: #202020;
     margin-bottom: 12px;
     font-weight: @font-weight-semibold;
+
+    #media-breakpoint-down(sm, {
+        display: none;
+      }
+
+    )
   }
 
   &__form-group {
@@ -42,6 +94,13 @@
     display: flex;
     flex-direction: column;
     margin-right: 16px;
+    margin-bottom: 8px;
+
+    #media-breakpoint-down(sm, {
+        margin-right: 0;
+      }
+
+    )
   }
 
   &__form-input {
@@ -140,6 +199,21 @@
     &:focus {
       outline: none;
     }
+
+    #media-breakpoint-down(md, {
+        width: 260px;
+        margin-right: 16px;
+      }
+
+    );
+
+    #media-breakpoint-down(sm, {
+        width: auto;
+        margin-right: 0;
+        margin-top: 37px;
+      }
+
+    )
   }
 
   &--small {
@@ -156,6 +230,7 @@
       &__title {
         font-size: 24px;
         margin-bottom: 11px;
+        display: block !important;
       }
 
       &__sub {
@@ -163,6 +238,7 @@
         text-align: center;
         color: #0F0F0F;
         margin-bottom: 28px;
+        display: block !important;
       }
 
       &__form-group {
