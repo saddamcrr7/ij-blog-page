@@ -8,6 +8,20 @@
     margin-bottom: 3px;
     line-height: 39px;
     text-transform: capitalize;
+    position: relative;
+    padding-right: 24px;
+    width: fit-content;
+
+    &::after{
+      content: '';
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      border-radius: 6px;
+      background: @white;
+      right: 0;
+      bottom: 10px;
+    }
   }
 
   &__sub {
