@@ -245,6 +245,7 @@
   &--small {
     height: auto;
     width: 274px;
+    border-radius: 5px;
 
     .c-post-card {
       &__header {
@@ -333,6 +334,39 @@
       &__sub {
         display: none;
       }
+    }
+  }
+
+  &--featured {
+    position: relative;
+    overflow: hidden;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+    }
+
+    &::before {
+      top: 0;
+      left: 0;
+      width: 155px;
+      height: 50px;
+      background: @primary;
+      z-index: -1;
+      transform: rotate(-45deg) translate(-35px, -50px);
+      z-index: 9;
+    }
+
+    &::after {
+      width: 30px;
+      height: 40px;
+      top: 0;
+      left: 0;
+      z-index: 10;
+      background-image: url('../../assets/icons/fire.svg');
+      background-repeat: no-repeat;
+      background-position: center center;
     }
   }
 }
