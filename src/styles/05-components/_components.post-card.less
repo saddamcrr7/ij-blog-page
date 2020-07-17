@@ -2,6 +2,13 @@
   width: 100%;
   height: 100%;
 
+  &__title {
+    transition: opacity 0.3s;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
   &:not(.c-post-card--big, .c-post-card--video, .c-post-card--small, .c-post-card--box) {
     border-radius: 5px;
     overflow: hidden;
@@ -231,6 +238,9 @@
         z-index: 5;
         margin-top: -50px;
         padding-top: 48px !important;
+        background-color: transparent !important;
+        background-image: url('../../assets/icons/music-post-card-bg.svg') !important;
+        background-repeat: no-repeat;
       }
 
       &__sub {
@@ -246,8 +256,9 @@
 
       &__play-icon {
         position: absolute;
-        top: -22px;
-        left: 30px;
+        top: -26px;
+        left: 34px;
+        cursor: pointer;
       }
     }
   }
