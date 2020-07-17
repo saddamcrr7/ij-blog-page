@@ -8,6 +8,11 @@
     padding: 83px 30px 54px 30px;
     border-radius: 5px;
     overflow: hidden;
+
+    #media-breakpoint-down(sm, {
+      padding-left: 24px;
+      padding-right: 28px;
+    })
   }
 
   &__paly-icon {
@@ -28,6 +33,10 @@
     height: 100%;
     width: 100%;
     z-index: 1;
+
+    img {
+      width: 100%;
+    }
   }
 
   &__bg-overlay {
@@ -72,6 +81,17 @@
     &--bold {
       font-weight: @font-weight-bolder;
     }
+
+    #media-breakpoint-down(sm, {
+        font-size: 20px;
+        line-height: 33px;
+
+        &--bold {
+          font-size: 26px;
+        }
+      }
+
+    )
   }
 
   &__sub {
@@ -79,6 +99,12 @@
     color: @white;
     line-height: 24px;
     margin-bottom: 28px;
+
+    #media-breakpoint-down(sm, {
+      font-size: 14px;
+      line-height: 18px;
+      margin-bottom: 22px;
+    })
   }
 
   &__host {}
