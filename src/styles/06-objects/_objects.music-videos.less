@@ -1,9 +1,9 @@
-.o-music-videos{
+.o-music-videos {
   padding-top: 50px;
   padding-bottom: 50px;
   background-color: #151515;
 
-  &__container{
+  &__container {
     #make-container();
     #make-container-max-widths();
   }
@@ -15,11 +15,28 @@
   }
 
   &__row {
-    #make-row()
+    #make-row();
+    justify-content: center;
+
+    #media-breakpoint-up(md, {
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+      }
+
+    )
   }
 
   &__col {
     #make-col-ready();
-    #make-col(4);
+    margin-bottom: 20px;
+
+    #media-breakpoint-up(sm, {
+        max-width: 392px;
+        flex: 0 0 392px;
+        margin-bottom: 0;
+      }
+
+    )
   }
 }

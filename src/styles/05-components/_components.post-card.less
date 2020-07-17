@@ -241,6 +241,16 @@
         background-color: transparent !important;
         background-image: url('../../assets/icons/music-post-card-bg.svg') !important;
         background-repeat: no-repeat;
+        &::after {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          left: 0;
+          top: 50%;
+          background: @white;
+          z-index: -1;
+          content: '';
+        }
       }
 
       &__sub {

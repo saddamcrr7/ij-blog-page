@@ -15,11 +15,15 @@
   }
 
   &__row {
-    #make-row()
+    #make-row();
+    flex-wrap: nowrap;
+    overflow-x: auto
   }
 
   &__col {
     #make-col-ready();
     #make-col(3);
+    flex: 0 0 294px;
+    max-width: 294px;
   }
 }
