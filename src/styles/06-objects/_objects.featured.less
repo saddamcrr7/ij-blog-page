@@ -11,7 +11,12 @@
 
     #media-breakpoint-down(md, {
       max-width: 748 + @grid-gutter-width / 2;
-    })
+    });
+
+    @media (min-width: 1450px) {
+      margin-right: auto;
+      max-width: 1156px + @grid-gutter-width;
+    }
   }
 
   &__slider {
